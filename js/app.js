@@ -42,23 +42,31 @@ function draw() {
       // zombies appear randomly along width of canvas
       fallingZombies[i].x = Math.random() * 1200;
     }
+
+    //console.log(fallingZombies[i].x);
+    //console.log(fallingZombies[i].y);
+
+    // listen for clicks on canvas
+    canvas.addEventListener('click', function(event) {
+      lastDownTarget = event.target;
+      console.log("click worked");
+      var mousePos = getMousePos(canvas, event);
+      var clickX = mousePos.x;
+      var clickY = mousePos.y;
+      console.log(clickX + " is the click X " + clickY + " is the click Y");
+      }, false);
+
+    
   }
 }
 
 function setup() {
   var canvas = document.getElementById('canvas');
 
+
   if (canvas.getContext) {
     ctx = canvas.getContext('2d');
-
-    canvas.addEventListener('click', function(event) {
-          lastDownTarget = event.target;
-          console.log("click worked");
-          var mousePos = getMousePos(canvas, event);
-          var clickX = mousePos.x;
-          var clickY = mousePos.y;
-          console.log(clickX + " is the click X " + clickY + " is the click Y");
-      }, false);
+// deleted event listener from here... it worked
 
     backgroundImage = new Image();
     backgroundImage.src = "http://img11.deviantart.net/9f53/i/2013/023/7/4/hospital_corridor__1_by_montstar-d5sfata.jpg";
@@ -72,6 +80,7 @@ function setup() {
       fallingZ["y"] = Math.random() * 5;
       fallingZ["speed"] = 3 + Math.random() * 5;
       fallingZombies.push(fallingZ);
+
     }
   }
 }
@@ -116,7 +125,7 @@ var generateImageLocation = function() {
     var clickX = mousePos.x;
     var clickY = mousePos.y;
     //console.log(clickX + " is the click X " + clickY + " is the click Y");
-
+/*
     //image is 50 x 50 px
     //coordinates of image start at top left corner (randomX & randomY)
     //max X of click must be between randomX & randomX + 50
@@ -148,7 +157,8 @@ var generateImageLocation = function() {
     $('#shots').text("SHOTS LEFT : " + shotsLeftCounter);
     $('#hits').text("HITS : " + successfulHitsCounter);
     $('#score').text("SCORE : " + scoreCounter);
-  })
+    */
+/*  })
   }
 
 generateImageLocation();

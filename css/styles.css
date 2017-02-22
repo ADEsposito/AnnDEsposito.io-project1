@@ -2,11 +2,9 @@ body {
   background-color: black;
 }
 
-p {
-  color: green;
-  float: left;
+h1 {
+  color: lime;
   text-align: center;
-  display: inline;
 }
 
 #image {
@@ -24,22 +22,28 @@ p {
 }
 
 #shots {
-  color: green;
+  color: lime;
   float: left;
   text-align: center;
-  display: inline;
+  display: inline-block;
+  width: 33%;
+  font-size: x-large;
 }
 
 #hits {
-  color: green;
+  color: lime;
   float: left;
   text-align: center;
-  display: inline;
+  display: inline-block;
+  width: 33%;
+  font-size: x-large;
 }
 
 #score {
-  color: green;
-  float: left;
+  color: lime;
+  float: right;
   text-align: center;
-  display: inline;
+  display: inline-block;
+  width: 33%;
+  font-size: x-large;
 }
