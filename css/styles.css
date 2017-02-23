@@ -1,10 +1,17 @@
 body {
-  background-color: black;
+  background-image: url("http://abali.ru/wp-content/uploads/2014/01/krov_na_stene.jpg");
 }
 
 h1 {
-  color: lime;
+  color: red;
   text-align: center;
+}
+
+#banner {
+  color: red;
+  text-align: center;
+  font-size: x-large;
+  font-weight: bold;
 }
 
 #image {
