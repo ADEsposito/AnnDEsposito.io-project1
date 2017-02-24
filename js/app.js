@@ -80,7 +80,7 @@ function updateFallingZombies(){
 function draw() {
   if(shotsLeftCounter === 0){
     $('#shots').text("SHOTS LEFT : 0");
-    $('#banner').text("FINAL SCORE : " + scoreCounter);
+    $('h1').text("FINAL SCORE : " + scoreCounter);
     clearInterval(animate)
   }
   // clear the canvas

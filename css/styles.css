@@ -8,13 +8,6 @@ h1 {
   text-align: center;
 }
 
-#banner {
-  color: red;
-  text-align: center;
-  font-size: x-large;
-  font-weight: bold;
-}
-
 #image {
   visibility: hidden;
 }
