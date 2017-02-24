@@ -14,6 +14,7 @@ var y = 0;
 var numOfZombies = 10;
 var fallingZombies = [];
 
+
 function getMousePos(canvas, evt) {
   var rect = canvas.getBoundingClientRect();
   return {
@@ -22,9 +23,11 @@ function getMousePos(canvas, evt) {
   };
 }
 
+
 function drawBackground() {
   ctx.drawImage(backgroundImage, 0, 0);
 }
+
 
 canvas.addEventListener('click', function(event) {
   lastDownTarget = event.target;
@@ -56,7 +59,6 @@ function checkZombieClick(mouseX, mouseY){
     }
   }
 
-
   if (xCheck === true && yCheck === true) {
       shotsLeftCounter--;
       successfulHitsCounter += 1;
@@ -76,6 +78,7 @@ function checkZombieClick(mouseX, mouseY){
 function updateFallingZombies(){
   return fallingZombies
 }
+
 
 function draw() {
   if(shotsLeftCounter === 0){
@@ -101,6 +104,7 @@ function draw() {
     }
   }
 }
+
 
 function setup() {
   var canvas = document.getElementById('canvas');
