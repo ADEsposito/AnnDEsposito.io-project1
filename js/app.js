@@ -31,8 +31,10 @@ canvas.addEventListener('click', function(event) {
   var mousePos = getMousePos(canvas, event);
   var clickX = mousePos.x;
   var clickY = mousePos.y;
-  checkZombieClick(clickX, clickY)
-  }, false);
+  if(shotsLeftCounter > 0) {
+    checkZombieClick(clickX, clickY)
+  }
+}, false);
 
 
 function checkZombieClick(mouseX, mouseY){
